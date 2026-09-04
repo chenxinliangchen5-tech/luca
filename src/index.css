@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Noto Sans SC', 'Noto Sans', system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #1e232b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #eceef2;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a5ba0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2c4684;
+}
+
+/* Section anchor offset */
+section[id] {
+  scroll-margin-top: 80px;
+}
